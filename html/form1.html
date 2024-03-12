@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de socios</title>
+</head>
+<body>
+    <h1>Registro de socios</h1>
+    <form action="procesar_registro.php" method="post">
+        <label for="numero_socio">Número de socio:</label>
+        <input type="text" id="numero_socio" name="numero_socio" value="1" readonly>
+        <br>
+        <label for="nif">NIF:</label>
+        <input type="text" id="nif" name="nif" required>
+        <br>
+        <label for="nombre">Nombre y apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        <br>
+        <label for="codigo_postal">Código postal:</label>
+        <input type="text" id="codigo_postal" name="codigo_postal" required>
+        <br>
+        <label for="municipio">Municipio:</label>
+        <input type="text" id="municipio" name="municipio" required>
+        <br>
+        <label for="provincia">Provincia:</label>
+        <select id="provincia" name="provincia" required>
+            <option value="">Seleccione una provincia</option>
+            <option value="alava">Álava</option>
+            <option value="albacete">Albacete</option>
+            <!-- ... -->
+            <option value="zamora">Zamora</option>
+        </select>
+        <br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+        <br>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>
