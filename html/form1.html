@@ -9,38 +9,103 @@
     <form action="procesar_registro.php" method="post">
         <label for="numero_socio">Número de socio:</label>
         <input type="text" id="numero_socio" name="numero_socio" value="1" readonly>
-        <br>
+
+        <p><br>
         <label for="nif">NIF:</label>
         <input type="text" id="nif" name="nif" required>
-        <br>
+        </p>
+
+        <p><br>
         <label for="nombre">Nombre y apellidos:</label>
         <input type="text" id="nombre" name="nombre" required>
-        <br>
+        </p>
+
+        <p><br>
         <label for="direccion">Dirección:</label>
         <input type="text" id="direccion" name="direccion" required>
-        <br>
+        </p>
+
+        <p><br>
         <label for="codigo_postal">Código postal:</label>
         <input type="text" id="codigo_postal" name="codigo_postal" required>
-        <br>
+        </p>
+        
+        <p><br>
         <label for="municipio">Municipio:</label>
         <input type="text" id="municipio" name="municipio" required>
-        <br>
+        </p>
+        
+        <p><br>
         <label for="provincia">Provincia:</label>
         <select id="provincia" name="provincia" required>
             <option value="">Seleccione una provincia</option>
-            <option value="alava">Álava</option>
-            <option value="albacete">Albacete</option>
-            <!-- ... -->
-            <option value="zamora">Zamora</option>
+            <option value="">Elige Provincia</option>
+            <option value="Álava/Araba">Álava/Araba</option>
+            <option value="Albacete">Albacete</option>
+            <option value="Alicante">Alicante</option>
+            <option value="Almería">Almería</option>
+            <option value="Asturias">Asturias</option>
+            <option value="Ávila">Ávila</option>
+            <option value="Badajoz">Badajoz</option>
+            <option value="Baleares">Baleares</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Burgos">Burgos</option>
+            <option value="Cáceres">Cáceres</option>
+            <option value="Cádiz">Cádiz</option>
+            <option value="Cantabria">Cantabria</option>
+            <option value="Castellón">Castellón</option>
+            <option value="Ciudad Real">Ciudad Real</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Cuenca">Cuenca</option>
+            <option value="Gerona/Girona">Gerona/Girona</option>
+            <option value="Granada">Granada</option>
+            <option value="Guadalajara">Guadalajara</option>
+            <option value="Guipúzcoa/Gipuzkoa">Guipúzcoa/Gipuzkoa</option>
+            <option value="Huelva">Huelva</option>
+            <option value="Huesca">Huesca</option>
+            <option value="Jaén">Jaén</option>
+            <option value="La Coruña/A Coruña">La Coruña/A Coruña</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Las Palmas">Las Palmas</option>
+            <option value="León">León</option>
+            <option value="Lérida/Lleida">Lérida/Lleida</option>
+            <option value="Lugo">Lugo</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Málaga">Málaga</option>
+            <option value="Murcia">Murcia</option>
+            <option value="Navarra">Navarra</option>
+            <option value="Orense/Ourense">Orense/Ourense</option>
+            <option value="Palencia">Palencia</option>
+            <option value="Pontevedra">Pontevedra</option>
+            <option value="Salamanca">Salamanca</option>
+            <option value="Segovia">Segovia</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Soria">Soria</option>
+            <option value="Tarragona">Tarragona</option>
+            <option value="Tenerife">Tenerife</option>
+            <option value="Teruel">Teruel</option>
+            <option value="Toledo">Toledo</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Valladolid">Valladolid</option>
+            <option value="Vizcaya/Bizkaia">Vizcaya/Bizkaia</option>
+            <option value="Zamora">Zamora</option>
+            <option value="Zaragoza">Zaragoza</option>
         </select>
-        <br>
+        </p>
+
+        <p><br>
         <label for="telefono">Teléfono:</label>
         <input type="text" id="telefono" name="telefono" required>
-        <br>
+        </p>
+
+        <p><br>
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" required>
-        <br>
+        </p>
+
+        <p><br>
         <input type="submit" value="Registrar">
+        </p>
     </form>
 </body>
 </html>
