@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
         <title>Formulario venta de aceite</title>
-        <link href="../CSS/stylesheet.css" rel="stylesheet"/>
+        <link href="../css/stylesheet.css" rel="stylesheet"/>
     </head>
 
     <body>
@@ -41,12 +41,63 @@
                     <td>
                         <input type="number" id="PrecioLitro" name="PrecioLitro" min="0"/>
                     </td>
-                    
+
                     <td>
                         <input type="number" id="Subtotal" name="Subtotal" min="0"/>
                     </td>
                 </tr>
-            </table>
+
+                <tr>
+                    <td>
+                        <select id="TipoDeAceite1" name="TipoDeAceite1">
+                            <option value="AceiteDeOlivaVirgenExtra1">Aceite de oliva virgen extra</option>
+                            <option value="AceiteDeOlivaVirgen1">Aceite de oliva virgen</option>
+                            <option value="AceiteDeOrujo1">Aceite de orujo de oliva</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input type="number" id="Cantidad1" name="Cantidad1" min="0"/>
+                    </td>
+
+                    <td>
+                        <input type="number" id="PrecioLitro1" name="PrecioLitro1" min="0"/>
+                    </td>
+                    
+                    <td>
+                        <input type="number" id="Subtotal1" name="Subtotal1" min="0"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <select id="TipoDeAceite2" name="TipoDeAceite2">
+                            <option value="AceiteDeOlivaVirgenExtra2">Aceite de oliva virgen extra</option>
+                            <option value="AceiteDeOlivaVirgen2">Aceite de oliva virgen</option>
+                            <option value="AceiteDeOrujo2">Aceite de orujo de oliva</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input type="number" id="Cantidad2" name="Cantidad2" min="0"/>
+                    </td>
+
+                    <td>
+                        <input type="number" id="PrecioLitro2" name="PrecioLitro2" min="0"/>
+                    </td>
+                    
+                    <td>
+                        <input type="number" id="Subtotal2" name="Subtotal2" min="0"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total:</td>
+                    <td><input type="number" id="Total" name="Total" min="0"/></td>
+                </tr>
+                        </table>
             <br><br>
             <input type="submit" id="Enviar" name="Enviar"/>
         </form>
