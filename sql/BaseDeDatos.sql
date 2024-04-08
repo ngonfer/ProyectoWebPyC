@@ -75,11 +75,12 @@ INSERT INTO Venta VALUES (NULL, '2024-02-12 12:16:43','22222222B');
 INSERT INTO Venta VALUES (NULL, '2024-01-11 12:14:43','33333333C');
 INSERT INTO Venta VALUES (NULL, '2024-01-23 12:18:46','11111111A');
 
--- INSERT INTO Producto_Venta (1, '0001');
--- INSERT INTO Producto_Venta (2, '0002');
--- INSERT INTO Producto_Venta (3, '0003');
+INSERT INTO Producto_Venta VALUES (1, '0001');
+INSERT INTO Producto_Venta VALUES (2, '0002');
+INSERT INTO Producto_Venta VALUES (3, '0003');
 
 SELECT Precio FROM Producto WHERE Cod_Tipo='0002';
 SELECT * FROM Entrega;
 SELECT * FROM Socio;
 SELECT * FROM Venta;
+SELECT * FROM Producto_Venta;
