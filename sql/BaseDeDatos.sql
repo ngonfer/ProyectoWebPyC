@@ -6,15 +6,18 @@ CREATE TABLE Producto (
 );
 
 CREATE TABLE Socio (
-  NIF varchar(9),
+  NIF varchar(9) CHECK (
+        NIF REGEXP '^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]'
+        OR NIF REGEXP'^[KLMXYZ][0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKE]'
+        OR NIF REGEXP '^[TRWAGMYFPDXBNJZSQVHLCKE]{1}[0-9]{8}'),
   Nombre varchar(20) NOT NULL,
   Ap1 varchar(20) NOT NULL,
   Ap2 varchar(20),
   Dirección varchar(60) NOT NULL,
-  Cod_Postal varchar(5) NOT NULL,
+  Cod_Postal varchar(5) NOT NULL, 
   Municipio varchar(20),
   Provincia varchar(20),
-  Teléfono varchar(9),
+  Teléfono varchar(9) CHECK(Teléfono regexp '^[6][0-9]{8}'),
   Correo varchar(30),
   CONSTRAINT NIF_pk PRIMARY KEY(NIF)
 );
@@ -24,8 +27,8 @@ CREATE TABLE Entrega (
   Cantidad integer NOT NULL,
   Fecha_y_hora timestamp NOT NULL,
   Tipo enum('Árbol', 'Suelo') NOT NULL,
-  Parcela_Sigpac integer NOT NULL,
-  Recinto_Sigpac integer NOT NULL,
+  Parcela_Sigpac integer NOT NULL CHECK(Parcela_Sigpac>0),
+  Recinto_Sigpac integer NOT NULL CHECK(Recinto_Sigpac>0),
   NIF_Socio varchar(9),
   CONSTRAINT Entrega_NIF_Socio_fk FOREIGN KEY(NIF_Socio)
                         REFERENCES Socio(NIF)
@@ -48,6 +51,7 @@ CREATE TABLE Venta (
 CREATE TABLE Producto_Venta (
   Num_Factura integer,
   Cod_Tipo varchar(4),
+  Cantidad int NOT NULL,
   CONSTRAINT Producto_Venta_Factura_fk FOREIGN KEY(Num_Factura)
                                        REFERENCES Venta(Num_Factura)
                                        ON UPDATE CASCADE
@@ -63,9 +67,9 @@ INSERT INTO Producto VALUES ('0001', 'Aceite de oliva virgen extra', 12.50);
 INSERT INTO Producto VALUES ('0002', 'Aceite de oliva virgen', 10.30);
 INSERT INTO Producto VALUES ('0003', 'Aceite de orujo de oliva', 5.40);
 
-INSERT INTO Socio VALUES ('11111111A', 'Paquito', 'Perez', 'Montalvo', 'Calle Alcalá', '23433', 'Jaen', 'Jaen', '23131244', 'paquitoperez@gmail.com');
-INSERT INTO Socio VALUES ('22222222B', 'Juan', 'Gomez', 'Moya', 'Calle de los ciegos', '23439', 'Jaen', 'Jaen', '23183456', 'juangomez@gmail.com');
-INSERT INTO Socio VALUES ('33333333C', 'Lucía', 'López', 'Pascual', 'Paseo de Gracia', '23434', 'Jaen', 'Jaen', '23131364', 'luciaperez@gmail.com');
+INSERT INTO Socio VALUES ('11111111A', 'Paquito', 'Perez', 'Montalvo', 'Calle Alcalá', '23433', 'Jaen', 'Jaen', '631312442', 'paquitoperez@gmail.com');
+INSERT INTO Socio VALUES ('22222222B', 'Juan', 'Gomez', 'Moya', 'Calle de los ciegos', '23439', 'Jaen', 'Jaen', '631834563', 'juangomez@gmail.com');
+INSERT INTO Socio VALUES ('33333333C', 'Lucía', 'López', 'Pascual', 'Paseo de Gracia', '23434', 'Jaen', 'Jaen', '651213644', 'luciaperez@gmail.com');
 
 INSERT INTO Entrega VALUES (NULL, 2, '2024-03-12 07:16:43', 'Árbol', 56, 42, '11111111A');
 INSERT INTO Entrega VALUES (NULL, 3, '2024-03-24 06:19:46', 'Suelo', 102, 45, '22222222B');
