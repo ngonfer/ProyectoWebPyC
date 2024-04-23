@@ -8,27 +8,37 @@
 <body>
     <h1>Registro de socios</h1>
     <form action="procesar_registro.php" method="post">
-        <label for="numero_socio">Nï¿½mero de socio:</label>
+        <label for="numero_socio">N?mero de socio:</label>
         <input type="text" id="numero_socio" name="numero_socio" value="1" readonly>
 
         <p><br>
         <label for="nif">NIF:</label>
-        <input type="text" id="nif" name="nif" required pattern="[0-9]{8}.[a-zA-Z]">
+        <input type="text" id="nif" name="nif" required pattern="[0-9]{8}[A-Z]" title="Introduce un NIF válido">
         </p>
 
         <p><br>
-        <label for="nombre">Nombre y apellidos:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required maxlength="20">
         </p>
 
         <p><br>
-        <label for="direccion">Direcciï¿½n:</label>
+            <label for="apellido">Apellido 1:</label>
+            <input type="text" id="apellido" name="apellido" required maxlength="20">
+        </p>
+
+        <p><br>
+            <label for="nombre">Apellido 2:</label>
+            <input type="text" id="apellido2" name="apellido2" maxlength="20">
+        </p>
+
+        <p><br>
+        <label for="direccion">Dirección:</label>
         <input type="text" id="direccion" name="direccion" required>
         </p>
 
         <p><br>
-        <label for="codigo_postal">Cï¿½digo postal:</label>
-        <input type="text" id="codigo_postal" name="codigo_postal" required>
+        <label for="codigo_postal">Código postal:</label>
+        <input type="text" id="codigo_postal" name="codigo_postal" required pattern="[0-9]{5}" title="Introduce un código postal válido">
         </p>
         
         <p><br>
@@ -41,38 +51,38 @@
         <select id="provincia" name="provincia" required>
             <option value="">Seleccione una provincia</option>
             <option value="">Elige Provincia</option>
-            <option value="ï¿½lava/Araba">ï¿½lava/Araba</option>
+            <option value="?lava/Araba">?lava/Araba</option>
             <option value="Albacete">Albacete</option>
             <option value="Alicante">Alicante</option>
-            <option value="Almerï¿½a">Almerï¿½a</option>
+            <option value="Almer?a">Almer?a</option>
             <option value="Asturias">Asturias</option>
-            <option value="ï¿½vila">ï¿½vila</option>
+            <option value="?vila">?vila</option>
             <option value="Badajoz">Badajoz</option>
             <option value="Baleares">Baleares</option>
             <option value="Barcelona">Barcelona</option>
             <option value="Burgos">Burgos</option>
-            <option value="Cï¿½ceres">Cï¿½ceres</option>
-            <option value="Cï¿½diz">Cï¿½diz</option>
+            <option value="C?ceres">C?ceres</option>
+            <option value="C?diz">C?diz</option>
             <option value="Cantabria">Cantabria</option>
-            <option value="Castellï¿½n">Castellï¿½n</option>
+            <option value="Castell?n">Castell?n</option>
             <option value="Ciudad Real">Ciudad Real</option>
-            <option value="Cï¿½rdoba">Cï¿½rdoba</option>
+            <option value="C?rdoba">C?rdoba</option>
             <option value="Cuenca">Cuenca</option>
             <option value="Gerona/Girona">Gerona/Girona</option>
             <option value="Granada">Granada</option>
             <option value="Guadalajara">Guadalajara</option>
-            <option value="Guipï¿½zcoa/Gipuzkoa">Guipï¿½zcoa/Gipuzkoa</option>
+            <option value="Guip?zcoa/Gipuzkoa">Guip?zcoa/Gipuzkoa</option>
             <option value="Huelva">Huelva</option>
             <option value="Huesca">Huesca</option>
-            <option value="Jaï¿½n">Jaï¿½n</option>
-            <option value="La Coruï¿½a/A Coruï¿½a">La Coruï¿½a/A Coruï¿½a</option>
+            <option value="Ja?n">Ja?n</option>
+            <option value="La Coru?a/A Coru?a">La Coru?a/A Coru?a</option>
             <option value="La Rioja">La Rioja</option>
             <option value="Las Palmas">Las Palmas</option>
-            <option value="Leï¿½n">Leï¿½n</option>
-            <option value="Lï¿½rida/Lleida">Lï¿½rida/Lleida</option>
+            <option value="Le?n">Le?n</option>
+            <option value="L?rida/Lleida">L?rida/Lleida</option>
             <option value="Lugo">Lugo</option>
             <option value="Madrid">Madrid</option>
-            <option value="Mï¿½laga">Mï¿½laga</option>
+            <option value="M?laga">M?laga</option>
             <option value="Murcia">Murcia</option>
             <option value="Navarra">Navarra</option>
             <option value="Orense/Ourense">Orense/Ourense</option>
@@ -95,12 +105,12 @@
         </p>
 
         <p><br>
-        <label for="telefono">Telï¿½fono:</label>
+        <label for="telefono">Tel?fono:</label>
         <input type="tel" id="telefono" name="telefono" required>
         </p>
 
         <p><br>
-        <label for="email">Correo electrï¿½nico:</label>
+        <label for="email">Correo electr?nico:</label>
         <input type="email" id="email" name="email" required>
         </p>
 
@@ -110,3 +120,5 @@
     </form>
 </body>
 </html>
+
+<!-- La biblia: https://lenguajehtml.com/html/validaciones/atributo-pattern/ -->
