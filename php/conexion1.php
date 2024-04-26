@@ -16,8 +16,6 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    echo "Se ha realizado la conexión";
-
     $nif = $_POST['nif'];
     $nombre = $_POST['nombre'];
     $apellido1 = $_POST['apellido1'];
@@ -26,21 +24,15 @@
     $codigo_postal = $_POST['codigo_postal'];
     $municipio = $_POST['municipio'];
     $provincia = $_POST['provincia'];
-    $telefono = $_POST['telefomo'];
+    $telefono = $_POST['telefono'];
     $email = $_POST['email'];
 
     $sentenciaSQL="INSERT INTO Socio VALUES ('" . $nif . "', '" . $nombre . "', '" . $apellido1. "', '" . 
     $apellido2 . "', '" . $direccion . "', '" . $codigo_postal . "', '" . $municipio . "', '" . 
-    $provincia . "', '" . $provincia . "', '" . $email . "', '" . ");";
+    $provincia . "', '" . $telefono . "', '" . $email . "');";
  
     echo $sentenciaSQL;
     if (!$conn->query($sentenciaSQL))
-    // ->query($sentenciaSQL)) 
     {
         echo "Ha fallado la inserción de datos";
     }
-
-    echo "Se ha ejecutado correctamente la inserción de datos";
-
-    echo $sentenciaSQL;
-  
