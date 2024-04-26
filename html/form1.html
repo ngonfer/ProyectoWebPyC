@@ -7,13 +7,13 @@
 </head>
 <body>
     <h1>Registro de socios</h1>
-    <form action="procesar_registro.php" method="post">
+    <form action="../php/conexiÃ³n1.php" method="post">
         <label for="numero_socio">N?mero de socio:</label>
         <input type="text" id="numero_socio" name="numero_socio" value="1" readonly>
 
         <p><br>
         <label for="nif">NIF:</label>
-        <input type="text" id="nif" name="nif" required pattern="[0-9]{8}[A-Z]" title="Introduce un NIF válido">
+        <input type="text" id="nif" name="nif" required pattern="[0-9]{8}[A-Z]" title="Introduce un NIF vï¿½lido">
         </p>
 
         <p><br>
@@ -22,23 +22,23 @@
         </p>
 
         <p><br>
-            <label for="apellido">Apellido 1:</label>
-            <input type="text" id="apellido" name="apellido" required maxlength="20">
+            <label for="apellido1">Apellido 1:</label>
+            <input type="text" id="apellido1" name="apellido1" required maxlength="20">
         </p>
 
         <p><br>
-            <label for="nombre">Apellido 2:</label>
+            <label for="apellido2">Apellido 2:</label>
             <input type="text" id="apellido2" name="apellido2" maxlength="20">
         </p>
 
         <p><br>
-        <label for="direccion">Dirección:</label>
+        <label for="direccion">Direcciï¿½n:</label>
         <input type="text" id="direccion" name="direccion" required>
         </p>
 
         <p><br>
-        <label for="codigo_postal">Código postal:</label>
-        <input type="text" id="codigo_postal" name="codigo_postal" required pattern="[0-9]{5}" title="Introduce un código postal válido">
+        <label for="codigo_postal">Cï¿½digo postal:</label>
+        <input type="text" id="codigo_postal" name="codigo_postal" required pattern="[0-9]{5}" title="Introduce un cï¿½digo postal vï¿½lido">
         </p>
         
         <p><br>

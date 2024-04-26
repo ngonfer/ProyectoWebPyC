@@ -18,8 +18,22 @@
 
     echo "Se ha realizado la conexión";
 
-    $sentenciaSQL="INSERT INTO Producto VALUES ('0004', 'Aceite de oliva virgen extra', 12.50);";
+    $nif = $_POST['nif'];
+    $nombre = $_POST['nombre'];
+    $apellido1 = $_POST['apellido1'];
+    $apellido2 = $_POST['apellido2'];
+    $direccion = $_POST['direccion'];
+    $codigo_postal = $_POST['codigo_postal'];
+    $municipio = $_POST['municipio'];
+    $provincia = $_POST['provincia'];
+    $telefono = $_POST['telefomo'];
+    $email = $_POST['email'];
+
+    $sentenciaSQL="INSERT INTO Socio VALUES ('" . $nif . "', '" . $nombre . "', '" . $apellido1. "', '" . 
+    $apellido2 . "', '" . $direccion . "', '" . $codigo_postal . "', '" . $municipio . "', '" . 
+    $provincia . "', '" . $provincia . "', '" . $email . "', '" . ");";
  
+    echo $sentenciaSQL;
     if (!$conn->query($sentenciaSQL))
     // ->query($sentenciaSQL)) 
     {
