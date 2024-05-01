@@ -1,7 +1,7 @@
 <?php
    
     $nombreServidor = "localhost";
-    $baseDatos = "Cooperativa";
+    $baseDatos = "cooperativa";
     $nombreUsuario = "usuario";
     $password = "usuario";
    
@@ -16,9 +16,18 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    echo "Se ha realizado la conexión";
+    $numero_entrega = $_POST['numero_entrega'];
+    $fecha_hora = date("Y-m-d H:i:s", strtotime($_POST['fecha_hora']));
+    $nif_socio = $_POST['nif_socio'];
+    $cantidad_aceituna = $_POST['cantidad_aceituna'];
+    $tipo_aceituna = $_POST['tipo_aceituna'];
+    $parcela_sigpac = $_POST['parcela_sigpac'];
+    $recinto_sigpac = $_POST['recinto_sigpac'];
 
-    $sentenciaSQL="INSERT INTO Producto VALUES ('0004', 'Aceite de oliva virgen extra', 12.50);";
+    $sentenciaSQL="INSERT INTO Entrega VALUES (NULL, " . $cantidad_aceituna . ", '" . $fecha_hora . "', '" . 
+    $tipo_aceituna . "', " . $parcela_sigpac . ", " . $recinto_sigpac . ", '" . $nif_socio . "');";
+
+    echo $sentenciaSQL;
  
     if (!$conn->query($sentenciaSQL))
     // ->query($sentenciaSQL)) 
