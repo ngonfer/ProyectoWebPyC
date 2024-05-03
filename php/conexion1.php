@@ -30,8 +30,9 @@
     $sentenciaSQL="INSERT INTO Socio VALUES ('" . $nif . "', '" . $nombre . "', '" . $apellido1. "', '" . 
     $apellido2 . "', '" . $direccion . "', '" . $codigo_postal . "', '" . $municipio . "', '" . 
     $provincia . "', '" . $telefono . "', '" . $email . "');";
- 
+
     echo $sentenciaSQL;
+
     if (!$conn->query($sentenciaSQL))
     {
         echo "Ha fallado la inserción de datos";

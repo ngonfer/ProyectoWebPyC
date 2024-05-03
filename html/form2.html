@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta charset="utf-8"/>
     <title>Formulario entrega de aceituna</title>
     <link href="../css/stylesheet.css" rel="stylesheet"/>
 </head>
@@ -16,10 +16,10 @@
        <label for="fecha_hora">Fecha y hora de la entrega:</label>
        <input type="datetime-local" id="fecha_hora" name="fecha_hora" required>
        <br>
-       <p></p>
-       <label for="nif_socio">NIF del socio:</label>
-       <input type="text" id="nif_socio" name="nif_socio" required>
-       <br>
+       <p><br>
+        <label for="nif_socio">NIF:</label>
+        <input type="text" id="nif_socio" name="nif_socio" required pattern="[0-9]{8}[A-Z]" title="Introduce un NIF v�lido">
+        </p>
        <p></p>
        <label for="cantidad_aceituna">Cantidad de aceituna:</label>
        <input type="number" id="cantidad_aceituna" name="cantidad_aceituna" required>
@@ -27,8 +27,8 @@
        <p></p>
        <label for="tipo_aceituna">Tipo de aceituna:</label>
        <select id="tipo_aceituna" name="tipo_aceituna" required>
-           <option value="arbol">árbol</option>
-           <option value="suelo">Suelo</option>
+           <option value="Árbol">Árbol</option>
+           <option value="Suelo">Suelo</option>
        </select>
        <br>
        <p></p>

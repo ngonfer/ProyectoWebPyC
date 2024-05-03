@@ -1,7 +1,7 @@
 <?php
    
     $nombreServidor = "localhost";
-    $baseDatos = "cooperativa";
+    $baseDatos = "Cooperativa";
     $nombreUsuario = "usuario";
     $password = "usuario";
    
@@ -26,16 +26,12 @@
 
     $sentenciaSQL="INSERT INTO Entrega VALUES (NULL, " . $cantidad_aceituna . ", '" . $fecha_hora . "', '" . 
     $tipo_aceituna . "', " . $parcela_sigpac . ", " . $recinto_sigpac . ", '" . $nif_socio . "');";
+ 
 
     echo $sentenciaSQL;
- 
     if (!$conn->query($sentenciaSQL))
     // ->query($sentenciaSQL)) 
     {
         echo "Ha fallado la inserción de datos";
     }
-
-    echo "Se ha ejecutado correctamente la inserción de datos";
-
-    echo $sentenciaSQL;
-  
+?>
